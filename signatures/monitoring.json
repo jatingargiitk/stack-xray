@@ -1,0 +1,15 @@
+[
+  {"id": "sentry", "name": "Sentry", "category": "monitoring", "website": "https://sentry.io", "match": {"hosts": ["o[0-9]+\\.ingest\\.(?:us\\.|de\\.)?sentry\\.io", "browser\\.sentry-cdn\\.com", "js\\.sentry-cdn\\.com"], "js": ["sentry\\.javascript\\.", "__SENTRY__"], "text": ["\\bSentry\\b", "Functional Software"]}},
+  {"id": "datadog", "name": "Datadog", "category": "monitoring", "website": "https://datadoghq.com", "match": {"hosts": ["browser-intake-(?:us[0-9]-)?datadoghq\\.(?:com|eu)", "www\\.datadoghq-browser-agent\\.com"], "js": ["DD_RUM", "datadoghq-browser-agent"], "text": ["\\bDatadog\\b"]}},
+  {"id": "logrocket", "name": "LogRocket", "category": "monitoring", "website": "https://logrocket.com", "match": {"hosts": ["cdn\\.(?:lr-ingest|logrocket)\\.(?:io|com)", "r\\.lr-ingest\\.io", "cdn\\.lr-in-prod\\.com"], "text": ["\\bLogRocket\\b"]}},
+  {"id": "new-relic", "name": "New Relic", "category": "monitoring", "website": "https://newrelic.com", "match": {"hosts": ["js-agent\\.newrelic\\.com", "bam(?:-cell)?\\.nr-data\\.net"], "js": ["NREUM"], "text": ["New Relic"]}},
+  {"id": "highlight", "name": "Highlight.io", "category": "monitoring", "website": "https://highlight.io", "match": {"hosts": ["pub\\.highlight\\.(?:run|io)"], "text": ["Highlight\\.io"]}},
+  {"id": "bugsnag", "name": "Bugsnag", "category": "monitoring", "website": "https://bugsnag.com", "match": {"hosts": ["(?:sessions|notify)\\.bugsnag\\.com", "d2wy8f7a9ursnm\\.cloudfront\\.net"], "text": ["\\bBugsnag\\b"]}},
+  {"id": "grafana", "name": "Grafana Cloud", "category": "monitoring", "website": "https://grafana.com", "match": {"hosts": ["faro-collector-[a-z0-9-]+\\.grafana\\.net"], "text": ["Grafana Labs"]}},
+  {"id": "honeycomb", "name": "Honeycomb", "category": "monitoring", "website": "https://honeycomb.io", "match": {"hosts": ["api\\.honeycomb\\.io"], "text": ["\\bHoneycomb(?:\\.io| Inc)?\\b"]}},
+  {"id": "axiom", "name": "Axiom", "category": "monitoring", "website": "https://axiom.co", "match": {"hosts": ["api\\.axiom\\.co"], "text": ["Axiom, Inc"]}},
+  {"id": "statuspage", "name": "Atlassian Statuspage", "category": "monitoring", "website": "https://statuspage.io", "match": {"cname": ["stspg-customer\\.com$", "\\.statuspage\\.io$"], "dnsTxt": ["^status-page-domain-verification"]}},
+  {"id": "instatus", "name": "Instatus", "category": "monitoring", "website": "https://instatus.com", "match": {"cname": ["\\.instatus\\.com$", "hosting\\.instatus\\.com$"]}},
+  {"id": "betterstack", "name": "Better Stack", "category": "monitoring", "website": "https://betterstack.com", "match": {"cname": ["statuspage\\.betteruptime\\.com$", "\\.betteruptime\\.com$"], "text": ["Better Stack"]}},
+  {"id": "incident-io", "name": "incident.io", "category": "monitoring", "website": "https://incident.io", "match": {"cname": ["status\\.incident\\.io$", "\\.incident\\.io$"], "text": ["incident\\.io"]}}
+]
