@@ -1,0 +1,13 @@
+[
+  {"id": "google-workspace", "name": "Google Workspace", "category": "email", "website": "https://workspace.google.com", "match": {"mx": ["aspmx\\.l\\.google\\.com$", "\\.googlemail\\.com$", "^smtp\\.google\\.com$"], "dnsTxt": ["include:_spf\\.google\\.com"], "text": ["Google Workspace"]}},
+  {"id": "microsoft-365", "name": "Microsoft 365", "category": "email", "website": "https://microsoft.com/microsoft-365", "match": {"mx": ["\\.mail\\.protection\\.outlook\\.com$"], "dnsTxt": ["include:spf\\.protection\\.outlook\\.com", "^MS=ms[0-9]+"], "text": ["Microsoft 365", "Office 365"]}},
+  {"id": "proton-mail", "name": "Proton Mail", "category": "email", "website": "https://proton.me", "match": {"mx": ["\\.protonmail\\.ch$"], "dnsTxt": ["^protonmail-verification="]}},
+  {"id": "sendgrid", "name": "SendGrid", "category": "email", "website": "https://sendgrid.com", "match": {"dnsTxt": ["include:sendgrid\\.net"], "text": ["\\bSendGrid\\b", "Twilio SendGrid"]}},
+  {"id": "postmark", "name": "Postmark", "category": "email", "website": "https://postmarkapp.com", "match": {"dnsTxt": ["include:spf\\.mtasv\\.net"], "text": ["\\bPostmark\\b"]}},
+  {"id": "mailgun", "name": "Mailgun", "category": "email", "website": "https://mailgun.com", "match": {"dnsTxt": ["include:mailgun\\.org"], "text": ["\\bMailgun\\b"]}},
+  {"id": "amazon-ses", "name": "Amazon SES", "category": "email", "website": "https://aws.amazon.com/ses", "match": {"dnsTxt": ["include:amazonses\\.com"], "text": ["Amazon SES", "Amazon Simple Email Service"]}},
+  {"id": "resend", "name": "Resend", "category": "email", "website": "https://resend.com", "match": {"text": ["\\bResend(?:, Inc\\.?)?\\b(?= |,|\\.)"]}},
+  {"id": "customer-io", "name": "Customer.io", "category": "email", "website": "https://customer.io", "match": {"dnsTxt": ["include:customeriomail\\.com"], "hosts": ["assets\\.customer\\.io", "track\\.customer\\.io"], "text": ["Customer\\.io"]}},
+  {"id": "loops", "name": "Loops", "category": "email", "website": "https://loops.so", "match": {"text": ["\\bLoops\\.so\\b"]}},
+  {"id": "mailchimp", "name": "Mailchimp", "category": "email", "website": "https://mailchimp.com", "match": {"dnsTxt": ["include:servers\\.mcsv\\.net"], "hosts": ["chimpstatic\\.com"], "text": ["\\bMailchimp\\b"]}}
+]
