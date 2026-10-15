@@ -1,0 +1,22 @@
+[
+  {"id": "nextjs", "name": "Next.js", "category": "framework", "website": "https://nextjs.org", "match": {"html": ["/_next/static/", "__NEXT_DATA__", "self\\.__next_f"], "headers": ["^x-powered-by: next\\.js", "^x-nextjs-", "^x-matched-path:"]}},
+  {"id": "nuxt", "name": "Nuxt", "category": "framework", "website": "https://nuxt.com", "match": {"html": ["/_nuxt/", "window\\.__NUXT__", "id=\"__nuxt\""]}},
+  {"id": "remix", "name": "Remix", "category": "framework", "website": "https://remix.run", "match": {"html": ["window\\.__remixContext", "__remixManifest"]}},
+  {"id": "react-router", "name": "React Router (framework mode)", "category": "framework", "website": "https://reactrouter.com", "match": {"html": ["window\\.__reactRouterContext", "__reactRouterManifest"]}},
+  {"id": "sveltekit", "name": "SvelteKit", "category": "framework", "website": "https://svelte.dev", "match": {"html": ["__sveltekit_", "/_app/immutable/", "data-sveltekit-"]}},
+  {"id": "astro", "name": "Astro", "category": "framework", "website": "https://astro.build", "match": {"html": ["<astro-island", "/_astro/", "<meta name=\"generator\" content=\"Astro"]}},
+  {"id": "gatsby", "name": "Gatsby", "category": "framework", "website": "https://gatsbyjs.com", "match": {"html": ["id=\"___gatsby\"", "<meta name=\"generator\" content=\"Gatsby"]}},
+  {"id": "tanstack-start", "name": "TanStack Start", "category": "framework", "website": "https://tanstack.com/start", "match": {"html": ["__TSR_", "\\$_TSR"], "js": ["__TSR_ROUTER__", "@tanstack/react-start"]}},
+  {"id": "angular", "name": "Angular", "category": "framework", "website": "https://angular.dev", "match": {"html": ["ng-version=\"", "<app-root"]}},
+  {"id": "vue", "name": "Vue", "category": "framework", "website": "https://vuejs.org", "match": {"html": ["data-v-[0-9a-f]{8}", "data-server-rendered=\"true\""], "js": ["__VUE__", "__vue_app__"]}},
+  {"id": "react", "name": "React", "category": "framework", "website": "https://react.dev", "match": {"html": ["data-reactroot"], "js": ["__reactFiber\\$", "__reactContainer\\$", "react\\.transitional\\.element", "Symbol\\.for\\(\"react\\.element\"\\)"]}},
+  {"id": "vite", "name": "Vite", "category": "framework", "website": "https://vite.dev", "match": {"html": ["src=\"/assets/index-[A-Za-z0-9_-]{8}\\.js\"", "type=\"module\" crossorigin src=\"/assets/"], "js": ["__vite__mapDeps", "vite/modulepreload-polyfill"]}},
+  {"id": "flutter-web", "name": "Flutter Web", "category": "framework", "website": "https://flutter.dev", "match": {"html": ["flutter\\.js", "flutter_bootstrap\\.js", "main\\.dart\\.js"]}},
+  {"id": "rails", "name": "Ruby on Rails", "category": "framework", "website": "https://rubyonrails.org", "match": {"html": ["name=\"csrf-param\" content=\"authenticity_token\"", "data-turbo-track"], "headers": ["^x-runtime: [0-9.]+$"], "cookies": ["^_[a-z0-9_]+_session$"]}},
+  {"id": "django", "name": "Django", "category": "framework", "website": "https://djangoproject.com", "match": {"html": ["csrfmiddlewaretoken"], "cookies": ["^csrftoken$", "^django_language$"]}},
+  {"id": "laravel", "name": "Laravel", "category": "framework", "website": "https://laravel.com", "match": {"cookies": ["^laravel_session$"], "html": ["data-page=\"\\{&quot;component"]}},
+  {"id": "phoenix", "name": "Phoenix (Elixir)", "category": "framework", "website": "https://phoenixframework.org", "match": {"html": ["data-phx-main", "phx-socket", "data-phx-session"]}},
+  {"id": "express", "name": "Express", "category": "framework", "website": "https://expressjs.com", "match": {"headers": ["^x-powered-by: express"]}},
+  {"id": "wordpress", "name": "WordPress", "category": "framework", "website": "https://wordpress.org", "match": {"html": ["/wp-content/", "/wp-includes/"], "headers": ["^link: <[^>]+/wp-json/"]}},
+  {"id": "htmx", "name": "htmx", "category": "framework", "website": "https://htmx.org", "match": {"html": ["\\bhx-(?:get|post|swap|target)="]}}
+]
