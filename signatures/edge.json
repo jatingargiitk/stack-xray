@@ -1,0 +1,9 @@
+[
+  {"id": "cloudflare", "name": "Cloudflare", "category": "edge", "website": "https://cloudflare.com", "match": {"headers": ["^server: cloudflare", "^cf-ray:"], "ns": ["\\.ns\\.cloudflare\\.com$"], "cname": ["\\.cdn\\.cloudflare\\.net$"], "cookies": ["^__cf_bm$", "^_cfuvid$"], "text": ["\\bCloudflare(?:, Inc\\.?)?\\b"]}},
+  {"id": "cloudfront", "name": "Amazon CloudFront", "category": "edge", "website": "https://aws.amazon.com/cloudfront", "match": {"headers": ["^x-amz-cf-(?:id|pop):", "^via: .*cloudfront"], "cname": ["\\.cloudfront\\.net$"]}},
+  {"id": "fastly", "name": "Fastly", "category": "edge", "website": "https://fastly.com", "match": {"headers": ["^x-served-by: cache-", "^x-fastly-request-id:", "^fastly-"], "cname": ["\\.fastly\\.net$", "\\.fastlylb\\.net$"], "text": ["\\bFastly\\b"]}},
+  {"id": "akamai", "name": "Akamai", "category": "edge", "website": "https://akamai.com", "match": {"headers": ["^x-akamai-", "^akamai-grn:", "^server: akamaighost"], "cname": ["\\.(?:edgekey|edgesuite|akamaiedge)\\.net$"], "text": ["\\bAkamai\\b"]}},
+  {"id": "route53", "name": "Amazon Route 53 (DNS)", "category": "edge", "website": "https://aws.amazon.com/route53", "match": {"ns": ["\\.awsdns-[0-9]+\\."]}},
+  {"id": "google-cloud-dns", "name": "Google Cloud DNS", "category": "edge", "website": "https://cloud.google.com/dns", "match": {"ns": ["^ns-cloud-[a-z0-9]+\\.googledomains\\.com$"]}},
+  {"id": "vercel-dns", "name": "Vercel DNS", "category": "edge", "website": "https://vercel.com/docs/dns", "match": {"ns": ["\\.vercel-dns\\.com$"]}}
+]
