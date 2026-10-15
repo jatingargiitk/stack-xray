@@ -1,0 +1,16 @@
+[
+  {"id": "supabase", "name": "Supabase", "category": "backend", "website": "https://supabase.com", "match": {"hosts": ["[a-z0-9]{20}\\.supabase\\.co", "\\.supabase\\.(?:co|in)"], "js": ["@supabase/supabase-js", "supabase\\.auth\\."], "cookies": ["^sb-[a-z0-9]+-auth-token"], "text": ["\\bSupabase\\b"]}},
+  {"id": "firebase", "name": "Firebase", "category": "backend", "website": "https://firebase.google.com", "match": {"hosts": ["[a-z0-9-]+\\.firebaseio\\.com", "firestore\\.googleapis\\.com", "firebaseinstallations\\.googleapis\\.com", "identitytoolkit\\.googleapis\\.com"], "js": ["firebaseapp\\.com\"", "apiKey:\"AIza[0-9A-Za-z_-]{35}\",authDomain"], "text": ["\\bFirebase\\b"]}},
+  {"id": "convex", "name": "Convex", "category": "backend", "website": "https://convex.dev", "match": {"hosts": ["[a-z0-9-]+\\.convex\\.(?:cloud|site)"], "text": ["\\bConvex(?:, Inc\\.?| Dev)\\b"]}},
+  {"id": "mongodb", "name": "MongoDB Atlas", "category": "backend", "website": "https://mongodb.com/atlas", "match": {"dnsTxt": ["^mongodb-site-verification"], "text": ["\\bMongoDB\\b"]}},
+  {"id": "planetscale", "name": "PlanetScale", "category": "backend", "website": "https://planetscale.com", "match": {"text": ["\\bPlanetScale\\b"]}},
+  {"id": "neon", "name": "Neon (Postgres)", "category": "backend", "website": "https://neon.tech", "match": {"hosts": ["[a-z0-9-]+\\.neon\\.tech"], "text": ["Neon (?:Inc|Postgres|Database)", "neon\\.tech"]}},
+  {"id": "upstash", "name": "Upstash", "category": "backend", "website": "https://upstash.com", "match": {"hosts": ["[a-z0-9-]+\\.upstash\\.io"], "text": ["\\bUpstash\\b"]}},
+  {"id": "snowflake", "name": "Snowflake", "category": "backend", "website": "https://snowflake.com", "match": {"text": ["Snowflake (?:Inc|Computing)"]}},
+  {"id": "sanity", "name": "Sanity (CMS)", "category": "backend", "website": "https://sanity.io", "match": {"hosts": ["cdn\\.sanity\\.io", "[a-z0-9]+\\.api\\.sanity\\.io"], "text": ["\\bSanity\\.io\\b"]}},
+  {"id": "contentful", "name": "Contentful (CMS)", "category": "backend", "website": "https://contentful.com", "match": {"hosts": ["(?:images|cdn|assets)\\.ctfassets\\.net"], "text": ["\\bContentful\\b"]}},
+  {"id": "algolia", "name": "Algolia", "category": "backend", "website": "https://algolia.com", "match": {"hosts": ["[a-z0-9]+-dsn\\.algolia\\.net", "[a-z0-9]+\\.algolianet\\.com"], "text": ["\\bAlgolia\\b"]}},
+  {"id": "pusher", "name": "Pusher", "category": "backend", "website": "https://pusher.com", "match": {"hosts": ["ws-[a-z0-9]+\\.pusher\\.com", "sockjs-[a-z0-9]+\\.pusher\\.com"], "text": ["\\bPusher\\b"]}},
+  {"id": "ably", "name": "Ably", "category": "backend", "website": "https://ably.com", "match": {"hosts": ["realtime\\.ably\\.io", "rest\\.ably\\.io"], "text": ["Ably Realtime"]}},
+  {"id": "liveblocks", "name": "Liveblocks", "category": "backend", "website": "https://liveblocks.io", "match": {"hosts": ["api\\.liveblocks\\.io"], "text": ["\\bLiveblocks\\b"]}}
+]
