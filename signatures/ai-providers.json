@@ -1,0 +1,309 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "category": "ai-provider",
+    "website": "https://openai.com",
+    "match": {
+      "dnsTxt": ["^openai-domain-verification="],
+      "hosts": ["api\\.openai\\.com", "cdn\\.platform\\.openai\\.com"],
+      "js": ["OpenAI/JS", "openai/resources/", "dangerouslyAllowBrowser.{0,200}openai"],
+      "text": ["\\bOpenAI\\b"]
+    },
+    "models": [
+      "[\"'`]((?:chatgpt-4o|gpt-[0-9](?:\\.[0-9])?)(?:[a-z0-9.-]{0,30}))[\"'`]",
+      "[\"'`](o[1345](?:-mini|-pro|-preview|-deep-research)?(?:-20[0-9]{2}-[0-9]{2}-[0-9]{2})?)[\"'`]",
+      "[\"'`](text-embedding-(?:3-small|3-large|ada-002))[\"'`]",
+      "[\"'`](whisper-1|gpt-image-1[a-z0-9.-]*|dall-e-[23]|tts-1(?:-hd)?|sora-[0-9][a-z0-9.-]*)[\"'`]"
+    ],
+    "note": "An openai-domain-verification TXT record proves an OpenAI account (often ChatGPT Enterprise), not that the product calls the API."
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic (Claude)",
+    "category": "ai-provider",
+    "website": "https://anthropic.com",
+    "match": {
+      "dnsTxt": ["^anthropic-domain-verification"],
+      "hosts": ["api\\.anthropic\\.com"],
+      "js": ["Anthropic/JS", "anthropic-dangerous-direct-browser-access", "[\"']anthropic-version[\"']"],
+      "text": ["\\bAnthropic\\b"]
+    },
+    "models": ["[\"'`](claude-(?:opus|sonnet|haiku|instant|[0-9])[a-z0-9.@-]{0,40})[\"'`]"],
+    "note": "An anthropic-domain-verification TXT record proves a Claude/Anthropic Console account, not that the product calls the API."
+  },
+  {
+    "id": "google-gemini",
+    "name": "Google Gemini / Vertex AI",
+    "category": "ai-provider",
+    "website": "https://ai.google.dev",
+    "match": {
+      "hosts": ["generativelanguage\\.googleapis\\.com", "aiplatform\\.googleapis\\.com"],
+      "js": ["@google/genai", "GoogleGenerativeAI", "@google/generative-ai"],
+      "text": ["\\bGemini (?:API|models?)\\b", "\\bVertex AI\\b", "Google DeepMind", "Google \\(Gemini\\)"]
+    },
+    "models": ["[\"'`](gemini-[0-9][a-z0-9.-]{0,40})[\"'`]", "[\"'`](imagen-[0-9][a-z0-9.-]*|veo-[0-9][a-z0-9.-]*)[\"'`]"]
+  },
+  {
+    "id": "azure-openai",
+    "name": "Azure OpenAI / Azure AI Foundry",
+    "category": "ai-provider",
+    "website": "https://azure.microsoft.com/products/ai-services/openai-service",
+    "match": {
+      "hosts": ["[a-z0-9-]+\\.openai\\.azure\\.com", "[a-z0-9-]+\\.services\\.ai\\.azure\\.com", "[a-z0-9-]+\\.cognitiveservices\\.azure\\.com"],
+      "text": ["Azure OpenAI", "Azure AI (?:Foundry|Services)"]
+    }
+  },
+  {
+    "id": "aws-bedrock",
+    "name": "Amazon Bedrock",
+    "category": "ai-provider",
+    "website": "https://aws.amazon.com/bedrock",
+    "match": {
+      "hosts": ["bedrock-runtime\\.[a-z0-9-]+\\.amazonaws\\.com"],
+      "text": ["(?:Amazon|AWS) Bedrock"]
+    }
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "category": "ai-provider",
+    "website": "https://mistral.ai",
+    "match": {
+      "hosts": ["api\\.mistral\\.ai"],
+      "text": ["\\bMistral AI\\b", "\\bMistral SAS\\b"]
+    },
+    "models": ["[\"'`]((?:mistral|codestral|pixtral|ministral|magistral|devstral)-[a-z0-9.-]{2,30})[\"'`]"]
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "category": "ai-provider",
+    "website": "https://cohere.com",
+    "match": {
+      "hosts": ["api\\.cohere\\.(?:ai|com)"],
+      "text": ["\\bCohere(?: Inc\\.?)?\\b(?! with)"]
+    },
+    "models": ["[\"'`](command-(?:r|a|light|nightly)[a-z0-9.+-]{0,30}|embed-(?:english|multilingual)-v[0-9.]+|rerank-[a-z0-9.-]+)[\"'`]"]
+  },
+  {
+    "id": "groq",
+    "name": "Groq",
+    "category": "ai-provider",
+    "website": "https://groq.com",
+    "match": {
+      "hosts": ["api\\.groq\\.com"],
+      "text": ["\\bGroq\\b"]
+    }
+  },
+  {
+    "id": "xai",
+    "name": "xAI (Grok)",
+    "category": "ai-provider",
+    "website": "https://x.ai",
+    "match": {
+      "hosts": ["api\\.x\\.ai"],
+      "text": ["\\bxAI\\b", "X\\.AI (?:Corp|LLC)"]
+    },
+    "models": ["[\"'`](grok-[0-9][a-z0-9.-]{0,30})[\"'`]"]
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "category": "ai-provider",
+    "website": "https://deepseek.com",
+    "match": {
+      "hosts": ["api\\.deepseek\\.com"],
+      "text": ["\\bDeepSeek\\b"]
+    },
+    "models": ["[\"'`](deepseek-[a-z0-9.-]{2,30})[\"'`]"]
+  },
+  {
+    "id": "meta-llama",
+    "name": "Meta Llama (open weights)",
+    "category": "ai-provider",
+    "website": "https://llama.com",
+    "match": {
+      "hosts": ["api\\.llama\\.com"],
+      "text": ["\\bLlama [0-9]"]
+    },
+    "models": ["[\"'`]((?:meta-llama/)?(?:meta-)?llama-?[0-9][a-z0-9./-]{0,40})[\"'`]"],
+    "note": "Open-weight models are usually served by an inference host (Together, Fireworks, Groq, Bedrock...) or self-hosted."
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen (Alibaba)",
+    "category": "ai-provider",
+    "website": "https://qwenlm.github.io",
+    "match": {
+      "hosts": ["dashscope(?:-intl)?\\.aliyuncs\\.com"],
+      "text": ["\\bQwen\\b", "Alibaba Cloud Model Studio"]
+    },
+    "models": ["[\"'`]((?:Qwen/)?qwen[0-9.]*-[a-z0-9.-]{2,30})[\"'`]"]
+  },
+  {
+    "id": "moonshot",
+    "name": "Moonshot AI (Kimi)",
+    "category": "ai-provider",
+    "website": "https://moonshot.ai",
+    "match": {
+      "hosts": ["api\\.moonshot\\.(?:ai|cn)"],
+      "text": ["Moonshot AI"]
+    },
+    "models": ["[\"'`]((?:moonshotai/)?kimi-k[0-9][a-z0-9.-]*)[\"'`]"]
+  },
+  {
+    "id": "perplexity-api",
+    "name": "Perplexity API (Sonar)",
+    "category": "ai-provider",
+    "website": "https://docs.perplexity.ai",
+    "match": {
+      "hosts": ["api\\.perplexity\\.ai"],
+      "text": ["Perplexity (?:AI|API|Sonar)"]
+    },
+    "models": ["[\"'`](sonar(?:-pro|-reasoning(?:-pro)?|-deep-research)?)[\"'`]"]
+  },
+  {
+    "id": "together",
+    "name": "Together AI",
+    "category": "ai-provider",
+    "website": "https://together.ai",
+    "match": {
+      "hosts": ["api\\.together\\.(?:xyz|ai)"],
+      "text": ["Together AI", "Together Computer"]
+    }
+  },
+  {
+    "id": "fireworks",
+    "name": "Fireworks AI",
+    "category": "ai-provider",
+    "website": "https://fireworks.ai",
+    "match": {
+      "hosts": ["api\\.fireworks\\.ai"],
+      "text": ["Fireworks AI"]
+    }
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "category": "ai-provider",
+    "website": "https://openrouter.ai",
+    "match": {
+      "hosts": ["openrouter\\.ai"],
+      "text": ["\\bOpenRouter\\b"]
+    }
+  },
+  {
+    "id": "cerebras",
+    "name": "Cerebras",
+    "category": "ai-provider",
+    "website": "https://cerebras.ai",
+    "match": {
+      "hosts": ["api\\.cerebras\\.ai"],
+      "text": ["\\bCerebras\\b"]
+    }
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "category": "ai-provider",
+    "website": "https://replicate.com",
+    "match": {
+      "hosts": ["api\\.replicate\\.com", "replicate\\.delivery"],
+      "text": ["\\bReplicate(?:, Inc\\.?)?\\b(?= |,|\\.|$)"]
+    }
+  },
+  {
+    "id": "fal",
+    "name": "fal.ai",
+    "category": "ai-provider",
+    "website": "https://fal.ai",
+    "match": {
+      "hosts": ["(?:queue\\.)?fal\\.run", "fal\\.media", "rest\\.alpha\\.fal\\.ai"],
+      "text": ["\\bfal\\.ai\\b", "Features & Labels"]
+    }
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "category": "ai-provider",
+    "website": "https://huggingface.co",
+    "match": {
+      "hosts": ["api-inference\\.huggingface\\.co", "router\\.huggingface\\.co", "[a-z0-9-]+\\.hf\\.space", "endpoints\\.huggingface\\.cloud"],
+      "text": ["Hugging ?Face"]
+    }
+  },
+  {
+    "id": "stability",
+    "name": "Stability AI",
+    "category": "ai-provider",
+    "website": "https://stability.ai",
+    "match": {
+      "hosts": ["api\\.stability\\.ai"],
+      "text": ["Stability AI"]
+    }
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "ai-provider",
+    "website": "https://elevenlabs.io",
+    "match": {
+      "hosts": ["api\\.(?:us\\.)?elevenlabs\\.io"],
+      "js": ["@elevenlabs/", "elevenlabs-js"],
+      "text": ["\\bElevenLabs\\b", "Eleven Labs"]
+    },
+    "models": ["[\"'`](eleven_[a-z0-9_]+)[\"'`]"]
+  },
+  {
+    "id": "deepgram",
+    "name": "Deepgram",
+    "category": "ai-provider",
+    "website": "https://deepgram.com",
+    "match": {
+      "hosts": ["api\\.deepgram\\.com"],
+      "text": ["\\bDeepgram\\b"]
+    },
+    "models": ["[\"'`](nova-[23](?:-[a-z]+)?|aura-[0-9]?-?[a-z-]+-en)[\"'`]"]
+  },
+  {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "category": "ai-provider",
+    "website": "https://assemblyai.com",
+    "match": {
+      "hosts": ["api\\.assemblyai\\.com", "streaming\\.assemblyai\\.com"],
+      "text": ["\\bAssemblyAI\\b", "Assembly AI"]
+    }
+  },
+  {
+    "id": "cartesia",
+    "name": "Cartesia",
+    "category": "ai-provider",
+    "website": "https://cartesia.ai",
+    "match": {
+      "hosts": ["api\\.cartesia\\.ai"],
+      "text": ["\\bCartesia\\b"]
+    }
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "category": "ai-provider",
+    "website": "https://runwayml.com",
+    "match": {
+      "hosts": ["api\\.(?:dev\\.)?runwayml\\.com"],
+      "text": ["Runway AI", "RunwayML"]
+    }
+  },
+  {
+    "id": "voyage",
+    "name": "Voyage AI",
+    "category": "ai-provider",
+    "website": "https://voyageai.com",
+    "match": {
+      "hosts": ["api\\.voyageai\\.com"],
+      "text": ["Voyage AI"]
+    }
+  }
+]
