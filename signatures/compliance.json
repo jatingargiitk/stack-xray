@@ -1,0 +1,9 @@
+[
+  {"id": "vanta", "name": "Vanta", "category": "compliance", "website": "https://vanta.com", "match": {"cname": ["\\.vantatrust\\.com$", "trust\\.vanta\\.com$"], "hosts": ["app\\.vanta\\.com"], "text": ["\\bVanta\\b"]}},
+  {"id": "drata", "name": "Drata", "category": "compliance", "website": "https://drata.com", "match": {"cname": ["\\.trust\\.drata\\.com$", "\\.drata\\.com$"], "text": ["\\bDrata\\b"]}},
+  {"id": "safebase", "name": "SafeBase", "category": "compliance", "website": "https://safebase.io", "match": {"cname": ["\\.safebase\\.io$", "safebase-[a-z0-9-]+"], "html": ["safebase\\.io"], "text": ["\\bSafeBase\\b"]}},
+  {"id": "secureframe", "name": "Secureframe", "category": "compliance", "website": "https://secureframe.com", "match": {"cname": ["\\.secureframetrust\\.com$"], "text": ["\\bSecureframe\\b"]}},
+  {"id": "onetrust", "name": "OneTrust", "category": "compliance", "website": "https://onetrust.com", "match": {"dnsTxt": ["^onetrust-domain-verification"], "hosts": ["cdn\\.cookielaw\\.org", "geolocation\\.onetrust\\.com"], "text": ["\\bOneTrust\\b"]}},
+  {"id": "termly", "name": "Termly", "category": "compliance", "website": "https://termly.io", "match": {"hosts": ["app\\.termly\\.io"]}},
+  {"id": "osano", "name": "Osano", "category": "compliance", "website": "https://osano.com", "match": {"hosts": ["cmp\\.osano\\.com"]}}
+]
