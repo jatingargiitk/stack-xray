@@ -1,0 +1,9 @@
+[
+  {"id": "stripe", "name": "Stripe", "category": "payments", "website": "https://stripe.com", "match": {"dnsTxt": ["^stripe-verification="], "hosts": ["js\\.stripe\\.com", "api\\.stripe\\.com", "m\\.stripe\\.network", "checkout\\.stripe\\.com"], "text": ["\\bStripe(?:, Inc\\.?)?\\b"]}},
+  {"id": "paddle", "name": "Paddle", "category": "payments", "website": "https://paddle.com", "match": {"hosts": ["cdn\\.paddle\\.com", "(?:sandbox-)?checkout\\.paddle\\.com"], "text": ["Paddle\\.com"]}},
+  {"id": "lemonsqueezy", "name": "Lemon Squeezy", "category": "payments", "website": "https://lemonsqueezy.com", "match": {"hosts": ["app\\.lemonsqueezy\\.com", "assets\\.lemonsqueezy\\.com"], "text": ["Lemon Squeezy"]}},
+  {"id": "chargebee", "name": "Chargebee", "category": "payments", "website": "https://chargebee.com", "match": {"hosts": ["js\\.chargebee\\.com", "[a-z0-9-]+\\.chargebee\\.com"], "text": ["\\bChargebee\\b"]}},
+  {"id": "orb", "name": "Orb (usage billing)", "category": "payments", "website": "https://withorb.com", "match": {"hosts": ["api\\.withorb\\.com"], "text": ["\\bOrb\\b \\(", "Kepler Technologies"]}},
+  {"id": "metronome", "name": "Metronome (usage billing)", "category": "payments", "website": "https://metronome.com", "match": {"text": ["\\bMetronome(?:, Inc\\.?)?\\b"]}},
+  {"id": "paypal", "name": "PayPal", "category": "payments", "website": "https://paypal.com", "match": {"hosts": ["www\\.paypal\\.com/sdk", "www\\.paypalobjects\\.com"], "text": ["\\bPayPal\\b"]}}
+]
