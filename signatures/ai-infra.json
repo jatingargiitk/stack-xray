@@ -1,0 +1,139 @@
+[
+  {
+    "id": "vercel-ai-sdk",
+    "name": "Vercel AI SDK",
+    "category": "ai-infra",
+    "website": "https://ai-sdk.dev",
+    "match": {
+      "hosts": ["ai-gateway\\.vercel\\.sh"],
+      "js": ["x-vercel-ai-data-stream", "x-vercel-ai-ui-message-stream", "@ai-sdk/", "experimental_prepareRequestBody"],
+      "text": ["Vercel AI Gateway"]
+    }
+  },
+  {
+    "id": "pinecone",
+    "name": "Pinecone",
+    "category": "ai-infra",
+    "website": "https://pinecone.io",
+    "match": { "hosts": ["[a-z0-9-]+\\.svc\\.[a-z0-9-]+\\.pinecone\\.io"], "text": ["\\bPinecone\\b"] }
+  },
+  {
+    "id": "turbopuffer",
+    "name": "turbopuffer",
+    "category": "ai-infra",
+    "website": "https://turbopuffer.com",
+    "match": { "dnsTxt": ["^turbopuffer-domain-verification"], "hosts": ["turbopuffer\\.com"], "text": ["\\b[Tt]urbopuffer\\b"] }
+  },
+  {
+    "id": "weaviate",
+    "name": "Weaviate",
+    "category": "ai-infra",
+    "website": "https://weaviate.io",
+    "match": { "hosts": ["weaviate\\.(?:network|cloud)"], "text": ["\\bWeaviate\\b"] }
+  },
+  {
+    "id": "qdrant",
+    "name": "Qdrant",
+    "category": "ai-infra",
+    "website": "https://qdrant.tech",
+    "match": { "hosts": ["cloud\\.qdrant\\.io"], "text": ["\\bQdrant\\b"] }
+  },
+  {
+    "id": "langsmith",
+    "name": "LangSmith / LangChain",
+    "category": "ai-infra",
+    "website": "https://langchain.com",
+    "match": { "hosts": ["api\\.smith\\.langchain\\.com"], "text": ["\\bLangSmith\\b", "\\bLangChain(?:, Inc\\.?)?\\b"] }
+  },
+  {
+    "id": "langfuse",
+    "name": "Langfuse",
+    "category": "ai-infra",
+    "website": "https://langfuse.com",
+    "match": { "hosts": ["(?:cloud|us\\.cloud)\\.langfuse\\.com"], "text": ["\\bLangfuse\\b"] }
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "category": "ai-infra",
+    "website": "https://helicone.ai",
+    "match": { "hosts": ["(?:oai|anthropic|gateway)\\.helicone\\.ai"], "text": ["\\bHelicone\\b"] }
+  },
+  {
+    "id": "braintrust",
+    "name": "Braintrust",
+    "category": "ai-infra",
+    "website": "https://braintrust.dev",
+    "match": { "hosts": ["api\\.braintrust\\.dev"], "text": ["Braintrust Data"] }
+  },
+  {
+    "id": "modal",
+    "name": "Modal",
+    "category": "ai-infra",
+    "website": "https://modal.com",
+    "match": { "hosts": ["[a-z0-9-]+\\.modal\\.run"], "text": ["Modal Labs"] }
+  },
+  {
+    "id": "baseten",
+    "name": "Baseten",
+    "category": "ai-infra",
+    "website": "https://baseten.co",
+    "match": { "hosts": ["[a-z0-9-]+\\.api\\.baseten\\.co"], "text": ["\\bBaseten\\b"] }
+  },
+  {
+    "id": "livekit",
+    "name": "LiveKit",
+    "category": "ai-infra",
+    "website": "https://livekit.io",
+    "match": { "hosts": ["[a-z0-9-]+\\.livekit\\.cloud"], "js": ["livekit-client"], "text": ["\\bLiveKit\\b"] }
+  },
+  {
+    "id": "vapi",
+    "name": "Vapi",
+    "category": "ai-infra",
+    "website": "https://vapi.ai",
+    "match": { "hosts": ["api\\.vapi\\.ai"], "js": ["@vapi-ai/"], "text": ["\\bVapi(?: AI|, Inc)\\b"] }
+  },
+  {
+    "id": "exa",
+    "name": "Exa",
+    "category": "ai-infra",
+    "website": "https://exa.ai",
+    "match": { "hosts": ["api\\.exa\\.ai"], "text": ["Exa Labs", "Exa AI"] }
+  },
+  {
+    "id": "tavily",
+    "name": "Tavily",
+    "category": "ai-infra",
+    "website": "https://tavily.com",
+    "match": { "hosts": ["api\\.tavily\\.com"], "text": ["\\bTavily\\b"] }
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "category": "ai-infra",
+    "website": "https://firecrawl.dev",
+    "match": { "hosts": ["api\\.firecrawl\\.dev"], "text": ["\\bFirecrawl\\b"] }
+  },
+  {
+    "id": "browserbase",
+    "name": "Browserbase",
+    "category": "ai-infra",
+    "website": "https://browserbase.com",
+    "match": { "hosts": ["(?:api|connect)\\.browserbase\\.com"], "text": ["\\bBrowserbase\\b"] }
+  },
+  {
+    "id": "e2b",
+    "name": "E2B",
+    "category": "ai-infra",
+    "website": "https://e2b.dev",
+    "match": { "hosts": ["[a-z0-9-]+\\.e2b\\.dev", "api\\.e2b\\.app"], "text": ["\\bE2B\\b"] }
+  },
+  {
+    "id": "anyscale",
+    "name": "Anyscale",
+    "category": "ai-infra",
+    "website": "https://anyscale.com",
+    "match": { "dnsTxt": ["^anyscale-domain-verification"], "text": ["\\bAnyscale\\b"] }
+  }
+]
