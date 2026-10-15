@@ -1,0 +1,47 @@
+{
+  "name": "stack-xray",
+  "version": "0.1.0",
+  "description": "Point it at any startup's website and get a diagram of how the product is built, including which AI providers it really uses. Evidence for every claim.",
+  "type": "module",
+  "bin": {
+    "stack-xray": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "signatures",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts",
+    "validate": "tsx scripts/validate-signatures.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "reverse-engineering",
+    "tech-stack",
+    "ai",
+    "llm",
+    "openai",
+    "anthropic",
+    "fingerprinting",
+    "mermaid",
+    "rea",
+    "mcp",
+    "agent-skill"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
