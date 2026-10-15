@@ -1,0 +1,33 @@
+name: Missing or wrong vendor
+description: stack-xray missed a vendor, or reported one that isn't there
+labels: [signature]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain you scanned
+      placeholder: example.ai
+    validations:
+      required: true
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor
+      placeholder: Groq
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What happened
+      options:
+        - Missed (false negative)
+        - Reported but wrong (false positive)
+        - Right vendor, wrong evidence tier
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public evidence
+      description: A subprocessor page URL, a script host, a DNS record, a CSP entry... anything a browser can see.
