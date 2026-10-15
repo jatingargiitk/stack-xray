@@ -1,0 +1,10 @@
+[
+  {"id": "intercom", "name": "Intercom", "category": "support", "website": "https://intercom.com", "match": {"hosts": ["widget\\.intercom\\.io", "js\\.intercomcdn\\.com", "api-iam\\.intercom\\.io"], "cname": ["custom\\.intercom\\.help$"], "text": ["\\bIntercom\\b"]}},
+  {"id": "zendesk", "name": "Zendesk", "category": "support", "website": "https://zendesk.com", "match": {"hosts": ["static\\.zdassets\\.com", "[a-z0-9-]+\\.zendesk\\.com"], "cname": ["\\.zendesk\\.com$"], "text": ["\\bZendesk\\b"]}},
+  {"id": "crisp", "name": "Crisp", "category": "support", "website": "https://crisp.chat", "match": {"hosts": ["client\\.crisp\\.chat"], "text": ["Crisp IM"]}},
+  {"id": "pylon", "name": "Pylon", "category": "support", "website": "https://usepylon.com", "match": {"hosts": ["widget\\.usepylon\\.com"], "text": ["\\bPylon\\b(?: Labs)?"]}},
+  {"id": "plain", "name": "Plain", "category": "support", "website": "https://plain.com", "match": {"dnsTxt": ["^plain-domain-verification"], "hosts": ["chat\\.cdn-plain\\.com"]}},
+  {"id": "front", "name": "Front", "category": "support", "website": "https://front.com", "match": {"hosts": ["chat-assets\\.frontapp\\.com"], "text": ["FrontApp"]}},
+  {"id": "help-scout", "name": "Help Scout", "category": "support", "website": "https://helpscout.com", "match": {"hosts": ["beacon-v2\\.helpscout\\.net"], "text": ["Help Scout"]}},
+  {"id": "drift", "name": "Drift / Salesloft", "category": "support", "website": "https://salesloft.com", "match": {"hosts": ["js\\.driftt\\.com"]}}
+]
